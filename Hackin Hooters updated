@@ -1,1 +1,124 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        SECOND CELL MARKDOWN:: 
+
+
+# **Hacking Hooters: Seasonal Variations in Urban Air Pollution: An Analysis of Air Quality Data**
+###      **Investigating the Relationship Between Seasonal Changes, Nitrogen Oxides, and Other Air Pollutants.**
+
+**Group members:** Ella S., Vy H., Amy N, Jayden M., Ibodat S., & Bahiyah W
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        SECOND CELL CODE:: 
+
+
+### Team Roles
+| Member | Role | Responsibilities |
+|---|---|---|
+| Ella S | Visualizer | Designs and creates graphs, charts, dashboards, and visual layouts to clearly present data and findings |
+| Vy H | Context Expert | Researches the background, domain knowledge, and real-world relevance to explain why the project matters and what the data signifies |
+| Amy N | Project Manager | Schedules meetings, tracks deadlines and progress, organizes the team's workflow, and leads presentations |
+| Jayden M | Coder 1 | Writes, tests, and executes the programming code required to clean, process, or model the data |
+| Ibodat S | Writer | Drafts, edits, and finalizes the written reports, summaries, documentation, and abstracts |
+| Bahiyah W | Analyst | Examines the data, runs statistical tests or data models, and interprets the findings to draw logical conclusions |
+
+Everyone makes the visualizations for their own part and reviews the whole notebook before submission.
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        THIRD CELL MARKDOWN:: 
+
+
+You are probably all familiar with urban air pollution concerns, especially during colder months. What you may not know is that comprehensive air quality data for Italian cities from 2004–2005 is available for public analysis.
+
+In this project, we will:
+* Explore air quality and meteorological data for Italian urban monitoring stations spanning 2004–2005
+* Make data visualizations
+* Formulate a hypothesis
+* Test the hypothesis using simulation
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        FOURTH CELL CODE:: 
+
+
+
+# Import Numpy and Datascience modules.
+import numpy as np
+import pandas as pd
+from datascience import *
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        FIFTH CELL MARKDOWN:: 
+
+
+
+### Load the Data:
+
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        SIXTH CELL MARKDOWN:: 
+
+
+# Load the Air Quality dataset using commas as the column separator
+url = 'data/Air Quality.csv'
+air = Table.read_table(url, sep=',')
+
+# Display basic information
+print(f"Number of rows: {air.num_rows}")
+print(f"Number of variables: {air.num_columns}")
+
+# Show first few rows
+air.show(3)
+
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        SEVENTH CELL MARKDOWN:: 
+
+
+### Possible Hypotheses to Test:
+
+
+
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        EIGHTH CELL MARKDOWN:: 
+
+
+url = 'data/Air Quality.csv'
+air = Table.read_table(url)
+air.show(3)
+
 
