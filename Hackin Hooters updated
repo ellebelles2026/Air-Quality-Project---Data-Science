@@ -1,11 +1,17 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        SECOND CELL MARKDOWN:: 
 
 
-# **Hacking Hooters: Seasonal Variations in Urban Air Pollution: An Analysis of Air Quality Data**
+# **Hacking Hooters: Seasonal Variations in Urban Air Pollution: An Analysis of Air Quality Data in Italy from 2004–2005**
 ###      **Investigating the Relationship Between Seasonal Changes, Nitrogen Oxides, and Other Air Pollutants.**
 
 **Group members:** Ella S., Vy H., Amy N, Jayden M., Ibodat S., & Bahiyah W
 
+- Seasonal variations: Changes in air quality across different seasons.
+- Air pollution: The concentration and relationships of different air pollutants.
+
+<center><b>Description of Our Plan</b></center>
+
+Our project follows a data science approach. One task is to collect and clean data on hourly sensor and reference measurements collected between March 2004 and February 2005*. We will split time series data by season to compare pollution levels and learn about pollution exposure. We will form null and alternative hypotheses regarding seasonal differences in pollution levels and exposure, including hypotheses that levels are higher in winter because of increased home heating demand and atmospheric inversions. Permutation tests and simulations will be used to test these hypotheses. We will include visualizations and descriptive statistics to describe the data.
 
 
 
@@ -49,8 +55,59 @@ In this project, we will:
 
 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        FOURTH CELL CODE:: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        FOURTH CELL MARKDOWN:: 
 
+
+
+### Statistical Tests & Data Science Methods
+
+1. **Data Processing:** Deal with problems of missing data and date and time information and data corruption․ Make seasonal samples of our data․
+
+2. **Hypothesis Testing:** Conduct a permutation test to evaluate the statistical significance of differences in average pollutant concentrations by season․ A permutation test can show whether differences in average concentrations by season are statistically meaningful․
+
+3. **Bootstrap Intervals:** Compute bootstrap confidence intervals for seasonal differences in average pollutant levels to evaluate the precision of estimates of pollutant levels․
+
+4. **Data Analasys & Visualization:** Make scatter and line plots by time and heat maps to identify weather and seasonal trends related to air pollution․
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        FIFTH CELL MARKDOWN:: 
+
+
+
+### Research Questions:
+
+**Primary Research Question:** Is there a statistically significant difference in Nitrogen Oxides ($NO_x$) or Carbon Monoxide ($CO$) levels between colder months (autumn/winter) and warmer months (spring/summer) in urban Italian air quality data?
+
+**Secondary Research Question:** How do meteorological factors like temperature and absolute humidity correlate with primary pollutant concentrations across different seasons?
+
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        SIXTH CELL MARKDOWN:: 
+
+
+### Description of the Data Science Plan
+
+Our project follows a data science approach. One task is to collect and clean data on hourly sensor and reference measurements collected between **March 2004** and **February 2005***. We will split time series data by season to compare pollution levels and learn about pollution exposure. We will form null and alternative hypotheses regarding seasonal differences in pollution levels and exposure, including hypotheses that levels are higher in winter because of increased home heating demand and atmospheric inversions. Permutation tests and simulations will be used to test these hypotheses. We will include visualizations and descriptive statistics to describe the data.
+
+
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        SEVENTH CELL CODE:: 
 
 
 # Import Numpy and Datascience modules.
@@ -66,8 +123,10 @@ import matplotlib.pyplot as plt
 
 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        FIFTH CELL MARKDOWN:: 
 
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        EIGHTH CELL MARKDOWN:: 
 
 
 ### Load the Data:
@@ -79,7 +138,9 @@ import matplotlib.pyplot as plt
 
 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        SIXTH CELL MARKDOWN:: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        NINTH CELL CODE:: 
+
+
 
 
 # Load the Air Quality dataset using commas as the column separator
@@ -100,7 +161,10 @@ air.show(3)
 
 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        SEVENTH CELL MARKDOWN:: 
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        TENTH CELL MARKDOWN:: 
+
 
 
 ### Possible Hypotheses to Test:
@@ -111,14 +175,15 @@ air.show(3)
 
 
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        ELEVENTH CELL CODE:: 
 
 
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DO NOT COPY THIS LINE!!!!! (I SAID DO NOT COPY THIS LINEE!)        EIGHTH CELL MARKDOWN:: 
 
 
 url = 'data/Air Quality.csv'
 air = Table.read_table(url)
 air.show(3)
+
+
 
 
