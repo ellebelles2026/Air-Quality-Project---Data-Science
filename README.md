@@ -42,6 +42,11 @@ In this project, we will:
 
 It contains measurements collected using a chemical multisensor device installed near road level in a significantly polluted urban area in Italy. 
 
+from datascience import *
+url = 'data/Air Quality.csv'
+air = Table.read_table(url)
+air.show(3)
+
 <h2 style="color: #16a34a;">Dataset Information</h2>
 
 | Category | Information |
