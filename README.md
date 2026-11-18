@@ -228,3 +228,71 @@ $$
 - If p-value ≥ 0.05: Fail to reject H₀.
 
 We will also calculate a 95% confidence interval for the difference in means.
+
+<h1 style="color: #dc2626;">Data Cleaning and Preparation</h1>
+
+<h2 style="color: #16a34a;">Remove Unnecessary Columns</h2>
+
+The original dataset contains two unnecessary empty columns at the end of the file. These columns do not contain any useful information and will be removed before further analysis.
+### Write code right here
+
+<h2 style="color: #16a34a;">Handle Missing Values</h2>
+
+In the original dataset, missing values are represented by -200 rather than standard NaN values.
+
+To ensure that missing data are correctly identified and handled during analysis, all occurrences of -200 will be replaced with NaN.
+### Write code right here
+
+<h2 style="color: #16a34a;">Convert Date and Time</h2>
+
+The Date and Time columns are initially stored as separate variables.
+
+We combine them into a single DateTime column and convert the values into datetime format. This allows us to organize observations chronologically and calculate daily average NOx concentrations.
+### Write code right here
+
+<h2 style="color: #16a34a;">Create a Season Column</h2>
+
+To investigate seasonal variations in NOx concentrations, each observation will be classified into one of four seasons based on its month.
+
+The seasonal classification is defined as follows:
+
+- Spring: March, April, May
+- Summer: June, July, August
+- Fall: September, October, November
+- Winter: December, January, February
+### Write code right here
+
+<h2 style="color: #16a34a;">Remove Mising NOx Values</h2>
+
+Since NOx concentration is the primary variable of interest, observations with missing NOx values cannot be used in the statistical analysis.
+
+Therefore, observations with missing NOx concentrations or invalid datetime values will be excluded.
+### Write code right here
+
+<h2 style="color: #16a34a;">Create the Daily Average Dataset</h2>
+
+The original dataset contains hourly observations. However, consecutive hourly measurements may be correlated because air pollution concentrations can remain similar over short periods.
+
+To reduce the influence of hourly dependence, we calculate the daily average NOx concentration for each day.
+
+Each row in the new analytical dataset represents one day rather than one hour. The dataset will include the date, daily average NOx concentration, number of hourly observations, and corresponding season.
+### Write code right here
+
+<h2 style="color: #16a34a;">Select Summer and Winter</h2>
+
+Since our research question focuses specifically on the difference in average NOx concentrations between summer and winter, we select observations from these two seasons for further analysis.
+
+Spring and fall observations will not be included in the statistical comparison.
+### Write code right here
+
+<h2 style="color: #16a34a;">Final Summary Table</h2>
+
+The final summary table provides an overview of the prepared dataset by comparing the number of daily observations and the average NOx concentration between summer and winter. It helps summarize the data distribution before proceeding to statistical analysis.
+### Write code right here
+
+<h1 style="color: #dc2626;">Final Dataset</h1>
+
+After completing all data cleaning and preparation steps, the final dataset contains daily average NOx concentrations for summer and winter.
+
+This dataset will be used for descriptive statistics, data visualization, and hypothesis testing in the following sections.
+### Write code right here
